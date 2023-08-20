@@ -37,11 +37,18 @@ nav {
 }
 
 .btn-login {
-    background-color: none;
+    color: black;
+    background-color: transparent;
+}
+
+.btn-login:hover {
+    background-color: transparent;
+    color:#441c6b;
+    text-decoration:underline;
 }
 
 main {
-    background: linear-gradient(170deg, #663399c0, #767676b4, #8151b1aa), url('../img/portada-inicio/1.jpg') center/cover;
+    background: linear-gradient(15deg, #663399ad, #767676a5, #8151b184), url('../img/portada-inicio/1.jpg') center/cover;
     position: relative;
     padding: 0;
     background-size: cover;
@@ -75,28 +82,42 @@ main {
     color: #eef;
 }
 
-.auth-container {
-    display: none;
-    border: 1px solid #ddd;
-    border-radius: 2em;
-    overflow: hidden;
-}
 
 .signup {
-    display: none;
-    flex: 1;
-    padding: 2rem;
-    background-color: #e65f5f;
+    top:5vh;
+    position: absolute;
+    height: 70vh;
     color: white;
+    border-radius: 2em;
+    background-color: #291043;
+    display: none;
+    padding: 2rem;
+    z-index:1000;
+}
+
+.btn-sign {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1.4em;
+    border-radius: 4em;
+    background: linear-gradient(90deg, #3e0b72, #767676, #480a86f4);
+}
+
+.btn-sign:hover {
+    transform: scaleX(2px);
+    opacity: 1;
 }
 
 .login {
-    display: block; /* Change display property to block */
-    flex: 1;
+    top:5vh;
+    position: absolute;
+    height: 70vh;
+    color: white;
+    border-radius: 2em;
+    background-color: #291043;
+    display: none;
     padding: 2rem;
-    background-color: #f4f4f4;
+    z-index:1000;
 }
-
 
 .signup h2, .login h2 {
     margin-bottom: 1rem;
@@ -118,7 +139,7 @@ input {
 
 button {
     padding: 0.5rem 1rem;
-    background-color: #333;
+    background-color: #1e1e1e;
     color: white;
     border: none;
     border-radius: 4px;
@@ -126,12 +147,376 @@ button {
 }
 
 button:hover {
-    background-color: #222;
+    background-color: #373737;
 }
+
+.card-container {
+    gap:2em;
+    display: flex;
+    height: 40vh;
+    padding: 2em;
+    background-color: #eef;
+}
+
+.card {
+    background-color: white;
+    border-radius: 1em;
+    overflow: auto;
+    padding: 3em;
+    box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.008);
+}
+
 
 footer {
     height:20vh;
     text-align: center;
     padding: 1rem;
-    background-color: #f4f4f4;
+    background-color: #cbb1d6;
+}
+
+.close-sign, .close-log {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.log-sign-gradient {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.log-sign-gradient::before {
+    z-index: 1000;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.814);
+    pointer-events: none; 
+}
+
+/* ... (estilos previos) ... */
+
+.user-profile {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background-color: #291043;
+    padding: 2rem;
+    border-radius: 2em;
+    color: white;
+    z-index: 1000;
+}
+
+.user-profile h2 {
+    margin-bottom: 1rem;
+}
+
+.user-profile label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.user-profile input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.user-profile button {
+    padding: 0.5rem 1rem;
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-profile button:hover {
+    background-color: #373737;
+}
+
+.additional-data-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1.5em;
+    padding: 2rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 10vh auto;
+    width: 50%;
+    display: grid;
+}
+
+.additional-data-form h2 {
+    color: #441c6b;
+    font-size: 1.8em;
+    margin-bottom: 3.5rem;
+}
+
+.form-sign {
+    color: white;
+    position: absolute;
+    top:1em;
+}
+
+.form-group {
+    display: flex;
+    gap:2em;
+    padding: 0.3em;
+    align-content: baseline;
+}
+
+.user-profile {
+    position: absolute;
+    top: 10em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 40vw;
+}
+
+.user-profile img {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.user-profile h3 {
+    color: #441c6b;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-profile p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.btn-like {
+    padding: 0.5rem 1rem;
+    background-color: #3e0b72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-like:hover {
+    background-color: #480a86;
+}
+
+/* Estilos generales */
+/* ... (estilos previos) ... */
+
+/* Estilos modernos para el dashboard */
+.dashboard-nav {
+    padding: 1rem;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.dashboard-nav li {
+    
+    margin-right: 1rem;
+}
+
+.dashboard-nav a {
+    color: #1e1e1e;
+    text-decoration: none;
+    color: rgb(28, 0, 0);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.dashboard-nav a:hover {
+    color: #f2f2f2;
+}
+
+.dashboard-main {
+    background: linear-gradient(15deg, #663399dc, #767676d3, #8151b1d4);
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-main h2 {
+    flex-grow: 2;
+    color: #f6f6f6;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.user-profile {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 40vw;
+}
+
+.user-profile img {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.user-profile h3 {
+    color: #441c6b;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-profile p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.btn-like {
+    padding: 0.5rem 1rem;
+    background-color: #3e0b72;
+    color: white;
+    border: none;
+}
+
+/* Estilos para la página de perfil */
+.profile-main {
+    background: linear-gradient(15deg, #663399dc, #767676d3, #8151b1d4);
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-main h2 {
+    flex-grow: 2;
+    color: #f6f6f6;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.user-profile {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 50vw;
+}
+
+.user-profile img {
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.user-profile h3 {
+    color: #441c6b;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-profile p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.edit-profile {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+
+.edit-profile h3 {
+    color: #441c6b;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #441c6b;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5em;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.form-group input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-save {
+    padding: 0.8rem 2rem;
+    background-color: #3e0b72;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save:hover {
+    background-color: #480a86f4;
 }

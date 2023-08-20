@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>LoveLink - Mi Perfil</title>
+</head>
+<body>
+    <div class="container-header">
+        <header>
+            <h1>l<i>♥</i>veLink</h1>
+        </header>
+        <nav class="dashboard-nav">
+            <ul>
+                <li><a href="dashboard.html">Hacer Match</a></li>
+                <li><a href="#">Mis Matches</a></li>
+                <li><a href="#">Mensajes</a></li>
+                <li><a href="#">Notificaciones</a></li>
+                <li><a href="profile.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main class="profile-main">
+        <h2>Mi Perfil</h2>
+
+        <div class="user-profile">
+            <img src="my-profile-picture.jpg" alt="Mi Perfil">
+            <h3>Tu Nombre</h3>
+            <p>Edad: XX</p>
+            <p>Intereses: Interés 1, Interés 2, Interés 3</p>
+        </div>
+
+        <div class="edit-profile">
+            <h3>Editar Perfil</h3>
+            <form>
+                <div class="form-group">
+                    <label for="edit-name">Nombre:</label>
+                    <input type="text" id="edit-name" name="edit-name" value="Tu Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="edit-age">Edad:</label>
+                    <input type="number" id="edit-age" name="edit-age" value="XX">
+                </div>
+                <div class="form-group">
+                    <label for="edit-interests">Intereses:</label>
+                    <input type="text" id="edit-interests" name="edit-interests" value="Interés 1, Interés 2, Interés 3">
+                </div>
+                <button class="btn-save">Guardar Cambios</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Citas App. Todos los derechos reservados.</p>
+    </footer>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
